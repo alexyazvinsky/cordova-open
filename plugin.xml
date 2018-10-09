@@ -15,8 +15,23 @@
         <param name="android-package" value="com.disusered.Open"/>
       </feature>
     </config-file>
-    <config-file parent="/*" target="AndroidManifest.xml"/>
+    <config-file parent="/*" target="AndroidManifest.xml">
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <provider
+          android:name="android.support.v4.content.FileProvider"
+          android:authorities="${applicationId}.fileProvider"
+          android:exported="false"
+          android:grantUriPermissions="true">
+          <meta-data
+              android:name="android.support.FILE_PROVIDER_PATHS"
+              android:resource="@xml/file_paths"/>
+      </provider>
+    </config-file>
     <source-file src="src/android/Open.java" target-dir="src/com/disusered"/>
+    <source-file src="src/android/file_paths.xml" target-dir="res/xml" />
   </platform>
   <platform name="ios">
     <config-file parent="/*" target="config.xml">
