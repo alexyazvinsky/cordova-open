@@ -1,6 +1,6 @@
 {
-  "name": "dc-cordova-open",
-  "version": "2.0.12",
+  "name": "cordova-open",
+  "version": "1.1.0",
   "description": "Open audio, video, images and more with applications installed on the user's device",
   "cordova": {
     "id": "com.disusered.open",
@@ -38,8 +38,8 @@
   },
   "homepage": "https://github.com/disusered/cordova-open",
   "devDependencies": {
-    "eslint": "0.24.1",
-    "gulp": "3.9.1",
-    "gulp-eslint": "0.15.0"
+    "eslint": "^0.24.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^0.15.0"
   }
 }
